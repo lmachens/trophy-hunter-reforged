@@ -4,6 +4,12 @@ import SideNav from "../components/general/sideNav";
 import { NextPage } from "next";
 import Header from "../components/general/header";
 import SubNav from "../components/general/subNav";
+import dynamic from "next/dynamic";
+
+const ConstellationWithNoSSR = dynamic(
+  () => import("../components/trophies/constellation"),
+  { ssr: false }
+);
 
 const Home: NextPage = () => (
   <div>
@@ -19,7 +25,7 @@ const Home: NextPage = () => (
         <div className="flex">
           <SubNav />
           <main>
-            <h1>Welcome to Trophy Hunter!</h1>
+            <ConstellationWithNoSSR />
           </main>
         </div>
       </div>
@@ -27,7 +33,8 @@ const Home: NextPage = () => (
     <style jsx>{`
       .layout {
         height: 100vh;
-        background-repeat: none;
+        background-repeat: no-repeat;
+        background-size: cover;
         background-image: linear-gradient(90deg, #1a2a3c, #4f5e6f),
           url(/images/bg.png);
         background-blend-mode: overlay;
@@ -40,6 +47,10 @@ const Home: NextPage = () => (
 
       .column {
         flex-direction: column;
+      }
+
+      main {
+        width: 100%;
       }
     `}</style>
   </div>
