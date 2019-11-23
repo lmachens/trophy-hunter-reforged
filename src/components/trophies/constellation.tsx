@@ -1,6 +1,7 @@
 import React from "react";
 import { createStars, draw, move } from "./stars";
-import { drawAbility } from "./ability";
+import { drawAbilities } from "./ability";
+import { drawTrophies } from "./trophies";
 
 const Constellation: React.FC = () => {
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
@@ -27,7 +28,8 @@ const Constellation: React.FC = () => {
         move({ canvas, star });
         draw({ canvas, star });
       });
-      drawAbility({ canvas });
+      drawAbilities({ canvas });
+      drawTrophies({ canvas });
     }, 20);
 
     return () => {
