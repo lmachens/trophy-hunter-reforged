@@ -5,10 +5,6 @@ const Background: React.FC = () => {
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
 
   React.useEffect(() => {
-    if (!canvasRef) {
-      return;
-    }
-
     const canvas = canvasRef.current;
     canvas.width = canvas.parentElement.offsetWidth;
     canvas.height = canvas.parentElement.offsetHeight;
@@ -40,7 +36,7 @@ const Background: React.FC = () => {
         canvas {
           position: fixed;
           background: #050505;
-          z-index: -1;
+          z-index: 0;
         }
       `}</style>
       <canvas ref={canvasRef} />

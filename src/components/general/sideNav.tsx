@@ -14,7 +14,7 @@ const SideNav: React.FC = () => {
 
   return (
     <nav>
-      <div className="menu">M</div>
+      <div className="menu"></div>
       <ul>
         {links.map(({ alt, href, src }) => (
           <GamesNavItem

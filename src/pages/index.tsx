@@ -22,12 +22,9 @@ const Home: NextPage = () => (
       <SideNav />
       <div className="flex column">
         <Header />
-        <div className="flex">
-          <SubNav />
-          <main>
-            <ConstellationWithNoSSR />
-          </main>
-        </div>
+        <main className="flex">
+          <ConstellationWithNoSSR />
+        </main>
       </div>
     </div>
     <style jsx>{`
@@ -43,6 +40,8 @@ const Home: NextPage = () => (
       .flex {
         display: flex;
         flex-grow: 1;
+        position: relative;
+        overflow: hidden;
       }
 
       .column {

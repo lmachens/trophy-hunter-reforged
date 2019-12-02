@@ -12,8 +12,8 @@ const trophyStyle = css.resolve`
     position: absolute;
     left: 0;
     top: 0;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
 `;
 
@@ -25,12 +25,12 @@ const Ability: React.FC<AbilityProps> = ({ ability, ...props }) => {
 
     const context = canvas.getContext("2d");
     context.strokeStyle = "#5d4f7d";
-    context.lineWidth = 1;
+    context.lineWidth = 2;
 
     context.shadowColor = "rgba(255,255,255,1)";
     context.shadowOffsetX = 0;
     context.shadowOffsetY = 0;
-    context.shadowBlur = 5;
+    context.shadowBlur = 4;
 
     const path2D = new Path2D(ability.svgPath);
     context.stroke(path2D);
