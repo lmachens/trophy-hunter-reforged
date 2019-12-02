@@ -4,9 +4,9 @@ import { useRouter } from "next/router";
 import GamesNavItem from "./gamesNavItem";
 
 const links = [
-  { href: "/lol", alt: "League of Legends", src: "/images/lol.png" },
-  { href: "/pubg", alt: "PUBG", src: "/images/pubg.png" },
-  { href: "/fortnite", alt: "Fortnite", src: "/images/fortnite.png" }
+  { href: "/", alt: "League of Legends", src: "/images/lol.png" },
+  { href: "/", alt: "PUBG", src: "/images/pubg.png" },
+  { href: "/", alt: "Fortnite", src: "/images/fortnite.png" }
 ];
 
 const SideNav: React.FC = () => {
@@ -14,7 +14,7 @@ const SideNav: React.FC = () => {
 
   return (
     <nav>
-      <div className="menu">M</div>
+      <div className="menu"></div>
       <ul>
         {links.map(({ alt, href, src }) => (
           <GamesNavItem

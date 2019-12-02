@@ -7,12 +7,6 @@ const Header: React.FC = () => {
   return (
     <header>
       <img src="/images/logo.png" alt="Trophy Hunter" />
-      <SearchInput
-        value={searchValue}
-        onChange={event => setSearchValue(event.target.value)}
-        placeholder="Search for anythig..."
-        className="search"
-      />
       <style jsx>{`
         header {
           height: 65px;
